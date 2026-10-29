@@ -60,12 +60,10 @@ codon_table={
     "AAA": "Lysine",
     "AAG": "Lysine",
 
-
     "AGT": "Serine",
     "AGC": "Serine",
     "AGA": "Arginine",
     "AGG": "Arginine",
-
 
     "GTT": "Valine",
     "GTC": "Valine",
@@ -88,4 +86,14 @@ codon_table={
     "GGG": "Glycine"
 
 } 
+print("="*50)
+print("Codon Table")
+print("="*50)
+
+#Take Input Sequence from the user
+sequence= input(
+    "\nEnter a DNA or RNA sequence:"
+)
+
+
 
