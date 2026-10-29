@@ -123,6 +123,27 @@ codons=[]
 for i in range(0,len(dna),-2,3):
     codon=dna[i:i+3]
     codons.append(codon)
+
+#Translate the codon 
+amino_acid=[]
+start_codon=[]
+stop_codon=[]
+
+for codon in codon:
+    # Find the amino acid from the dictionary
+    amino_acid = codon_table[codon]
+    # Store the amino acid
+    amino_acid.append(amino_acid)
+    # Identify the start codon
+    if codon=="ATG":
+        start_codon.append(codon)
+
+    #Identifying stop condon
+    if amino_acid=="Stop":
+        stop_codon.append(codon)
+        
+
+
     
 
 
