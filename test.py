@@ -189,6 +189,19 @@ if remainder!=0:
 else:
     print("None")
 
+#Summary
+print("\n" + "=" * 50)
+print("PROJECT SUMMARY")
+print("=" * 50)
+
+print("Input length:", len(sequence), "nucleotides")
+
+print("Complete codons:", len(codons))
+
+print("Amino acid entries:", len(amino_acid))
+
+print("Codons in table:", len(codon_table))
+print("\nProgram completed successfully.")
 
 
 
