@@ -115,7 +115,10 @@ else:
     else:
         sequence_type="DNA"
         dna=sequence
-        
+        print("\nSequence Type:", sequence_type)
+        print("\nInput Sequence:", sequence)
+
+
 
 
 
