@@ -118,6 +118,14 @@ else:
         print("\nSequence Type:", sequence_type)
         print("\nInput Sequence:", sequence)
 
+#Divide the sequence into codons
+codons=[]
+for i in range(0,len(dna),-2,3):
+    codon=dna[i:i+3]
+    codons.append(codon)
+    
+
+
 
 
 
