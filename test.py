@@ -141,7 +141,18 @@ for codon in codon:
     #Identifying stop condon
     if amino_acid=="Stop":
         stop_codon.append(codon)
-        
+
+#Display complete codon table 
+print("\n" + "=" * 50)
+print("COMPLETE CODON TABLE")
+print("=" * 50)
+for codon in sorted(codon_table):
+    print(codon, ":", codon_table[codon])
+    print("\nTotal codons:", len(codon_table))
+    
+
+
+
 
 
     
