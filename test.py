@@ -149,7 +149,26 @@ print("=" * 50)
 for codon in sorted(codon_table):
     print(codon, ":", codon_table[codon])
     print("\nTotal codons:", len(codon_table))
-    
+
+#Display codon by codon translation
+print("\n" + "=" * 50)
+print("TRANSLATION RESULTS")
+print("=" * 50)
+if len(codons) == 0:
+    print("No complete codons found.")
+else:
+     for codon, amino_acid in zip(
+            codons,amino_acid
+     ):
+         print(codon, "->", amino_acid)
+         
+         
+
+
+
+
+
+
 
 
 
