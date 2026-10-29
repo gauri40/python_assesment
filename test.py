@@ -161,7 +161,54 @@ else:
             codons,amino_acid
      ):
          print(codon, "->", amino_acid)
-         
+
+#Display final codon sequence
+print("\nCodons:")
+print(" - ".join(codons))
+print("\nAmino acid sequence:")
+print(" - ".join(amino_acid))
+
+#Display start and stop codon 
+print("\nStart codons found:")
+if len(start_codon) > 0:
+    print(", ".join(start_codon))
+else:
+    print("None")
+    print("\nStop codons found:")
+    if len(stop_codon) > 0:
+        print(", ".join(stop_codon))
+    else:
+        print("None")
+
+#Handle Incomplete Codon 
+remainder = len(dna) % 3
+print("\nIncomplete codon:")
+if remainder!=0:
+    incomplete = dna[len(dna) - remainder:]
+    print(incomplete)
+else:
+    print("None")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
          
 
 
