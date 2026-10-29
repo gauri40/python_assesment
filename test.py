@@ -107,6 +107,19 @@ elif not set(sequence).issubset(set("ATGC")) and not set(sequence).issubset(set(
      print("Use only A, T, G, C for DNA.")
      print("Use only A, U, G, C for RNA.")
 
+#Convert RNA into DNA coding format
+else:
+    if "U" in sequence:
+        sequence_type="RNA"
+        dna=sequence.replace("U","T")
+    else:
+        sequence_type="DNA"
+        dna=sequence
+        
+
+
+
+
 
 
 
