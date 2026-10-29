@@ -88,3 +88,4 @@ codon_table={
     "GGG": "Glycine"
 
 } 
+
