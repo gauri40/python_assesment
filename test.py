@@ -94,6 +94,20 @@ print("="*50)
 sequence= input(
     "\nEnter a DNA or RNA sequence:"
 )
+#Convert lowercase letters into uppercase
+sequence=sequence.upper()
+
+#Validate the sequnce
+if sequence =="":
+    print("\nError: The sequence cannot be empty")
+elif "T" in sequence and "U" in sequence:
+    print("\nError: DNA and RNA bases cannot be together")
+elif not set(sequence).issubset(set("ATGC")) and not set(sequence).issubset(set("AUGC")):
+     print("\nError: Invalid sequence.")
+     print("Use only A, T, G, C for DNA.")
+     print("Use only A, U, G, C for RNA.")
+
+
 
 
 
