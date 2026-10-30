@@ -135,4 +135,13 @@ for codon in codons:
         start_codon.append(codon)
     if amino == "Stop":
         stop_codon.append(codon)
-        
+
+# Display complete RNA codon table
+print("\n" + "=" * 50)
+print("COMPLETE RNA CODON TABLE")
+print("=" * 50)
+for codon in sorted(rna_codon_table):
+    print(codon, ":", rna_codon_table[codon])
+print("\nTotal codons:", len(rna_codon_table))
+
+
