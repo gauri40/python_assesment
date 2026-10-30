@@ -86,3 +86,12 @@ codon_table={
     "GGG": "Glycine"
 
 } 
+# Build the RNA codon table from the DNA one by replacing T with U
+rna_codon_table = {codon.replace("T", "U"): amino for codon, amino in codon_table.items()}
+
+print("=" * 50)
+print("DNA / RNA Codon Translator")
+print("=" * 50)
+# Take input sequence from the user
+sequence = input("\nEnter a DNA or RNA sequence:").upper().strip()
+
