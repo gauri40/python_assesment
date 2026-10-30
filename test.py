@@ -91,7 +91,7 @@ print("Codon Table")
 print("="*50)
 
 #Take Input Sequence from the user
-sequence= input(
+sequence=input(
     "\nEnter a DNA or RNA sequence:"
 )
 #Convert lowercase letters into uppercase
@@ -120,7 +120,7 @@ else:
 
 #Divide the sequence into codons
 codons=[]
-for i in range(0,len(dna),-2,3):
+for i in range(0, len(dna) - 2, 3):
     codon=dna[i:i+3]
     codons.append(codon)
 
@@ -129,11 +129,11 @@ amino_acid=[]
 start_codon=[]
 stop_codon=[]
 
-for codon in codon:
+for codon in codons:
     # Find the amino acid from the dictionary
-    amino_acid = codon_table[codon]
+    amino = codon_table[codon]
     # Store the amino acid
-    amino_acid.append(amino_acid)
+    amino_acid.append(amino)
     # Identify the start codon
     if codon=="ATG":
         start_codon.append(codon)
@@ -162,6 +162,15 @@ else:
      ):
          print(codon, "->", amino_acid)
 
+#RNA table from your DNA table by replacing T with U in every key
+rna_codon_table = {codon.replace("T", "U"): amino for codon, amino in codon_table.items()}
+if "U" in sequence:
+       sequence_type = "RNA"
+       rna = sequence
+else:
+    sequence_type = "DNA"
+    rna = sequence.replace("T", "U")
+
 #Display final codon sequence
 print("\nCodons:")
 print(" - ".join(codons))
@@ -189,6 +198,7 @@ if remainder!=0:
 else:
     print("None")
 
+
 #Summary
 print("\n" + "=" * 50)
 print("PROJECT SUMMARY")
@@ -202,6 +212,14 @@ print("Amino acid entries:", len(amino_acid))
 
 print("Codons in table:", len(codon_table))
 print("\nProgram completed successfully.")
+
+
+
+
+
+       
+
+
 
 
 
