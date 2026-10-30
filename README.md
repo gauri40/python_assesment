@@ -16,6 +16,9 @@ Requirements
 Python 3.8 or newer
 No external libraries needed
 
+File rna_translator.py contains the extended program to accept an RNA sequence by replacing thymine (T) with uracil (U), and translate the RNA codons
+using the standard genetic code.
+
 How It Works
 Input and validation: the sequence is converted to upper case and checked. Empty input, characters other than A/T/G/C/U, and sequences containing both T and U are rejected with an error message.
 DNA to RNA conversion: DNA input has every T replaced by U. RNA input is used as it is.
