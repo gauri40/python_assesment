@@ -95,3 +95,22 @@ print("=" * 50)
 # Take input sequence from the user
 sequence = input("\nEnter a DNA or RNA sequence:").upper().strip()
 
+# Authincate the sequence
+error = None
+if sequence == "":
+    error = "The sequence cannot be empty"
+elif "T" in sequence and "U" in sequence:
+    error = "DNA and RNA bases cannot be together"
+elif not (set(sequence) <= set("ATGC") or set(sequence) <= set("AUGC")):
+    error = "Invalid sequence.\nUse only A, T, G, C for DNA.\nUse only A, U, G, C for RNA."
+
+if error:
+    print("\nError:", error)
+    raise SystemExit
+# Detect type and convert everything to RNA (replace thymine T with uracil U)
+if "U" in sequence:
+    sequence_type = "RNA"
+    rna = sequence
+else:
+    sequence_type = "DNA"
+    rna = sequence.replace("T", "U")
