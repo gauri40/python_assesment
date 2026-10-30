@@ -114,3 +114,25 @@ if "U" in sequence:
 else:
     sequence_type = "DNA"
     rna = sequence.replace("T", "U")
+
+print("\nSequence Type:", sequence_type)
+print("\nInput Sequence:", sequence)
+print("\nRNA Sequence  :", rna)
+
+# Divide the RNA into complete codons only
+codons = [rna[i:i + 3] for i in range(0, len(rna) - 2, 3)]
+
+# Translate the RNA codons
+amino_acids = []
+start_codon = []
+stop_codon = []
+
+for codon in codons:
+    amino = rna_codon_table[codon]
+    amino_acids.append(amino)
+
+    if codon == "AUG":
+        start_codon.append(codon)
+    if amino == "Stop":
+        stop_codon.append(codon)
+        
