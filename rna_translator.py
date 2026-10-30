@@ -144,4 +144,31 @@ for codon in sorted(rna_codon_table):
     print(codon, ":", rna_codon_table[codon])
 print("\nTotal codons:", len(rna_codon_table))
 
+# Display codon by codon translation
+print("\n" + "=" * 50)
+print("TRANSLATION RESULTS")
+print("=" * 50)
+if len(codons) == 0:
+    print("No complete codons found.")
+else:
+    for codon, amino in zip(codons, amino_acids):
+        print(codon, "->", amino)
+
+print("\nRNA Codons:")
+print(" - ".join(codons))
+print("\nAmino acid sequence:")
+print(" - ".join(amino_acids))
+
+print("\nStart codons found:")
+print(", ".join(start_codon) if start_codon else "None")
+print("\nStop codons found:")
+print(", ".join(stop_codon) if stop_codon else "None")
+
+# Handle incomplete codon
+remainder = len(rna) % 3
+print("\nIncomplete codon:")
+print(rna[len(rna) - remainder:] if remainder != 0 else "None")
+
+
+
 
